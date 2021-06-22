@@ -32,7 +32,7 @@ if (getItem("city")) {
 }
 
 function showDetails(cityName) {
-  var url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName},&appid=${APIKEY}`;
+  var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName},&appid=${APIKEY}`;
 
   fetch(url)
     .then((res) => res.json())
