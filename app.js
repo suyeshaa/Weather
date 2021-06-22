@@ -81,7 +81,7 @@ function showCond(event) {
   console.log(id);
   // container.style.backgroundColor = weather[id];
   video.setAttribute("src", weather[id]);
-  icon.innerHTML = `<img src ="http://openweathermap.org/img/wn/${event.weather[0].icon}@2x.png">`;
+  icon.innerHTML = `<img src ="https://openweathermap.org/img/wn/${event.weather[0].icon}@2x.png">`;
   part2.innerHTML = `
     <div class="cond">RELATIVE HUMIDITY: ${event.main.humidity}%</div></div>
     <div class="cond">VISIBILITY: ${event.visibility}m</div>
