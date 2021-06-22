@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icons/Asset 2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="vid">
+      <video autoplay loop muted>
+        <source src="videos/Clouds - 4753.mp4" , type="video/mp4" />
+      </video>
+    </div>
+    <div class="start">
+      <div id="container">
+        <div id="part1">
+          <div id="city">Miami</div>
+          <div id="condition"></div>
+          <div id="temp"></div>
+          <div id="icon"></div>
+        </div>
+
+        <div id="part2"></div>
+        <div class="btn change_btn"><button>Change Location</button></div>
+
+        <div id="modal">
+          <div id="modal_content">
+            <div class="head">
+              <div>Location</div>
+              <div class="close_btn">&times;</div>
+            </div>
+            <div class="change_city">
+              CITY <br /><input type="text" id="new_city" />
+            </div>
+            <!-- <div class="change_state">State Code
+                    <br><input type="text" id="new_state">
+                </div> -->
+
+            <div id="" class="save_btn btn">
+              <button>Save Changes</button>
+            </div>
+
+            <div class="error">City not valid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
