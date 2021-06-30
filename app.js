@@ -13,14 +13,16 @@ var error = document.querySelector(".error");
 var icon = document.querySelector("#icon");
 var container = document.getElementById("container");
 var video = document.querySelector(".vid video");
-
+var iconImg = document.querySelector(".icon-img img");
+const vidBase = document.querySelector(".vid");
+console.log(vidBase);
 const weather = {
   2: "videos/thunderstorm.mp4",
   3: "videos/drizzle.mp4",
   5: "videos/rain.mp4",
   6: "videos/snow.mp4",
   7: "videos/atmosphere.mp4",
-  8: "videos/Clouds - 4753.mp4",
+  8: "videos/clouds.mp4",
 };
 
 console.log(weather[2]);
@@ -80,8 +82,25 @@ function showCond(event) {
   id = Math.floor(id);
   console.log(id);
   // container.style.backgroundColor = weather[id];
-  video.setAttribute("src", weather[id]);
-  icon.innerHTML = `<img src ="https://openweathermap.org/img/wn/${event.weather[0].icon}@2x.png">`;
+  // video.setAttribute("src", weather[id]);
+
+  //Video fadein Kalakari
+  vidBase.classList.add("fo");
+  setTimeout(function () {
+    video.setAttribute("src", weather[id]);
+    console.log("vidLogged");
+  }, 1000);
+  setTimeout(function () {
+    vidBase.classList.remove("fo");
+    console.log("class removed");
+  }, 2000);
+
+  iconImg.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${event.weather[0].icon}@2x.png`
+  );
+  // icon.innerHTML = `<img src ="https://openweathermap.org/img/wn/${event.weather[0].icon}@2x.png">`;
+
   part2.innerHTML = `
     <div class="cond">RELATIVE HUMIDITY: ${event.main.humidity}%</div></div>
     <div class="cond">VISIBILITY: ${event.visibility}m</div>
@@ -111,4 +130,13 @@ function setItem(val) {
 
 function getItem(value) {
   return localStorage.getItem(value);
+}
+
+// setTimeout(se, 1000)
+
+function setBg(id) {
+  video.setAttribute("src", weather[id]);
+  console.log("HEllo i came last");
+
+  // vidBase.classList.remove("fo");
 }

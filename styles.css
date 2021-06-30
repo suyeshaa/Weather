@@ -17,6 +17,22 @@ body {
   height: 100%;
 }
 
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0.3;
+  bottom: 0;
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/overlays/03.png");
+  z-index: 1;
+}
+
+.vid video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 #container {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(3px);
@@ -94,6 +110,8 @@ body {
   color: #080808af;
   font-weight: 700;
   box-shadow: 0 5px 15px 0 rgba(31, 30, 30, 0.5);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn button:hover {
@@ -227,5 +245,27 @@ input:focus {
   }
   #modal_content {
     width: 85%;
+  }
+}
+/* selection */
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+.fo {
+  animation: fadeOut 2s 1 forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(7px);
+  }
+  100% {
+    filter: blur(0px);
   }
 }
